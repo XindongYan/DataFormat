@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{margin: 100px;}
+        h2 {font-family: '微软雅黑';}
+        span {font-family: '微软雅黑'; font-weight: bold;}
+        li {font-family: '幼圆'; font-size: 15px}
+        p {font-size:15px}
+    </style>
+    <title>DataFormat</title>
+</head>
+<body>
+    <h2>
+        JSON语法规则
+    </h2>
+    <span>
+        JSON是JavaScript对象表示法语法的子集
+    </span>
+    <ul>
+        <li>数据在名称/值对中</li>
+        <li>数据由逗号分隔</li>
+        <li>花括号保存对象</li>
+        <li>方括号保存数组</li>
+    </ul>
+
+    <br>
+
+    <span>
+        JSON名称/值对
+    </span>
+    <p>JSON数据的书写格式是：名称/值对</p>
+    <p>名称/值对包括字段名称（在双引号中），后面写一个冒号，然后是值</p>
+    <code>"firstName": "John"</code>
+    <pre>等价于 firtanme = "John"</pre>
+
+    <br>
+
+    <span>
+        JSON值
+    </span>
+    <p>
+        JSON值可以是:
+    </p>
+    <ul>
+        <li>数字（整数或者是浮点数）</li>
+        <li>字符串（在双引号中）</li>
+        <li>逻辑值（true或者false）</li>
+        <li>数组（在方括号中）</li>
+        <li>对象（在花括号中）</li>
+        <li>null</li>
+    </ul>
+
+    <br>
+
+    <span>
+        JSON对象
+    </span>
+    <p>
+        JSON对象在花括号中书写：
+    </p>
+    <p>
+        对象可以包含多个名称和值对
+    </p>
+    <code>{"firstName":"John", "lastName":"Doe"}</code>
+    <pre>等价于 firstName = "John" lastName = "Doe"</pre>
+
+    <br>
+
+    <span>
+        JSON数组
+    </span>
+    <p>
+        JSON数组在方括号中书写
+    </p>
+    <p>
+        数组可以包含多个对象：
+    </p>
+    <pre>
+        {
+            "employess": [
+                { "firstName":"John" , "lastName":"Doe" },
+                { "firstName":"Anna" , "lastName":"Smith" },
+                { "firstName":"Peter" , "lastName":"Jones" }
+            ]
+        }
+        employess 包含了三个对象的数组
+    </pre>
+
+    <br>
+
+    <span>
+        JSON使用JavaScript语法
+    </span>
+    <p>
+        因为JSON使用JavaScript语法，所以无需额外的软件就能处理JavaScript中的JSON
+    </p>
+    <p>
+        通过JavaScript，你可以创建一个对象数组，并像这样进行赋值：
+    </p>
+    <pre>
+            var employees = [
+            { "firstName":"Bill" , "lastName":"Gates" },
+            { "firstName":"George" , "lastName":"Bush" },
+            { "firstName":"Thomas" , "lastName": "Carter" }
+            ];
+    </pre>
+    <p>可以像这样访问JavaScript对象数组的第一项：</p>
+    <code>employees[0].lastName;  返回内容是: Gates</code>
+    <p>甚至可以这样修改数据：</p>
+    <code>employees[0].lastName = 'Bob';</code>
+
+    <br>
+
+    <span>
+        JSON文件
+    </span>
+    <ul>
+        <li>JSON文件类型是 ".json"</li>
+        <li>JSON文本的MIMIE类型是"application/json"</li>
+    </ul>
+</body>
+</html>
