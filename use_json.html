@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        h2 {
+            font-family: '微软雅黑';
+        }
+
+        span {
+            font-family: '微软雅黑';
+            font-weight: bold;
+        }
+
+        li {
+            font-family: '幼圆';
+            font-size: 15px
+        }
+
+        p {
+            font-size: 15px
+        }
+    </style>
+    <title>JSON使用</title>
+</head>
+
+<body>
+    <h2>
+        JSON使用
+    </h2>
+    <span>
+        把JSON文本转换为JavaScript对象
+    </span>
+    <p>
+        JSON最常见的用法之一，是从web服务器上读取JSON数据（作为文件或者HttpRequest），将JSON数据转换为JavaScript对象，然后在网页中使用该数据
+    </p>
+
+    <br>
+
+    <span>
+        JSON实例-来自字符串的对象
+    </span>
+    <p>
+        创建包含JSON语法的JavaScript字符串：
+    </p>
+    <pre>
+            var txt = '{ "employees" : [' +
+            '{ "firstName":"Bill" , "lastName":"Gates" },' +
+            '{ "firstName":"George" , "lastName":"Bush" },' +
+            '{ "firstName":"Thomas" , "lastName":"Carter" } ]}';
+    </pre>
+    <p>
+        由于JSON语法是JavaScript语法的子集，JavaScript函数eval()可用于将JSON文本转换为JavaScript对象， eval()函数使用的是JavaScript编译器， 可解析JSON文本，然后生成JSON文本，然后生成JavaScript对象。必须把文本包含在括号中，避免语法错误：
+    </p>
+    <pre>
+        var obj = eval("(" + txt + ")");
+    </pre>
+    <p>
+        在网页中使用JavaScript对象：
+    </p>
+
+    <textarea name="" id="" cols="70" rows="10">
+        <p>
+            FirstName: <span id="fname"></span><br />
+            LastName: <span id="lname"></span><br />
+        </p>
+
+        <script>
+            var txt = '{"employees":[' +
+                '{"firstName":"Bill","lastName":"Gates" },' +
+                '{"firstName":"George","lastName":"Bush" },' +
+                '{"firstName":"Thomas","lastName":"Carter" }]}';
+
+            var obj = eval("(" + txt + ")");
+
+            document.getElementById('fname').innerHTML = obj.employees[1].firstName
+            document.getElementById('lname').innerHTML = obj.employees[1].lastName            
+        </script>  
+    </textarea>
+    
+    <pre>
+        <p>
+            FirstName: <span id="fname"></span><br />
+            LastName: <span id="lname"></span><br />
+        </p>
+
+        <script>
+            var txt = '{"employees":[' +
+                '{"firstName":"Bill","lastName":"Gates" },' +
+                '{"firstName":"George","lastName":"Bush" },' +
+                '{"firstName":"Thomas","lastName":"Carter" }]}';
+
+            var obj = eval("(" + txt + ")");
+
+            document.getElementById('fname').innerHTML = obj.employees[1].firstName
+            document.getElementById('lname').innerHTML = obj.employees[1].lastName            
+        </script>
+    </pre>
+
+    <br>
+
+    <span>JSON解释器</span>
+    <p>
+        eval()函数可编译并执行任何JavaScript代码。这些隐藏了一些安全问题。
+    </p>
+    <p>
+        使用JSON解析器将JSON转换为JavaScript对象是更安全的做法。JSON解析器只能识别JSON文本，而不会编译脚本。
+    </p>
+    <p>
+        在浏览器中，这提供了原生的JSON支持，而且JSON解析器的速度更快。
+    </p>
+    <p>
+        较新的浏览器和最新的ECMAScript标准中都包含了对原生JSON的支持
+    </p>
+</body>
+
+</html>
