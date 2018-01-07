@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        h2 {
+            font-family: '微软雅黑';
+        }
+
+        span {
+            font-family: '微软雅黑';
+            font-weight: bold;
+        }
+
+        li {
+            font-family: '幼圆';
+            font-size: 15px
+        }
+
+        p {
+            font-size: 15px
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <span>
+        示例
+    </span>
+    <br >
+    <textarea name="" id="" cols="70" rows="10">
+            <p>
+                    Name: <span id="jname"></span><br />
+                    Age: <span id="jage"></span><br />
+                    Address: <span id="jstreet"></span><br />
+                    Phone: <span id="jphone"></span><br />
+                </p>
+        
+                    <script type="text/javascript">
+                        var JSONObject = {
+                            "name": "Bill Gates",
+                            "street": "Fifth Avenue New York 666",
+                            "age": 56,
+                            "phone": "555 1234567"                
+                        };
+                        document.getElementById("jname").innerHTML = JSONObject.name
+                        document.getElementById("jage").innerHTML = JSONObject.age
+                        document.getElementById("jstreet").innerHTML = JSONObject.street
+                        document.getElementById("jphone").innerHTML = JSONObject.phone
+                    </script>
+    </textarea>
+    <pre>
+        <p>
+            Name: <span id="jname"></span><br />
+            Age: <span id="jage"></span><br />
+            Address: <span id="jstreet"></span><br />
+            Phone: <span id="jphone"></span><br />
+        </p>
+
+            <script type="text/javascript">
+                var JSONObject = {
+                    "name": "Bill Gates",
+                    "street": "Fifth Avenue New York 666",
+                    "age": 56,
+                    "phone": "555 1234567"                
+                };
+                document.getElementById("jname").innerHTML = JSONObject.name
+                document.getElementById("jage").innerHTML = JSONObject.age
+                document.getElementById("jstreet").innerHTML = JSONObject.street
+                document.getElementById("jphone").innerHTML = JSONObject.phone
+            </script>
+    </pre>
+
+    <span>
+        类似XML
+    </span>
+    <ul>
+        <li>JSON是纯文本</li>
+        <li>JSON具有“自我描述性”（人类可读）</li>
+        <li>JSON具有层级结构（值中存在值）</li>
+        <li>JSON可通过JavaScript进行解析</li>
+        <li>JSON数据可使用AJAX进行传输</li>
+    </ul>
+
+    <br>
+
+    <span>
+        相比XML不足之处
+    </span>
+    <ul>
+        <li>没有结束标签</li>
+        <li>更短</li>
+        <li>读写速度更快</li>
+        <li>能够使用JavaScript内建的eval()方法进行解析</li>
+        <li>使用数组</li>
+        <li>不使用保留字</li>
+    </ul>
+
+    <br>
+
+    <span>
+        为什么使用JSON？
+    </span>
+    <p>
+        对于AJAX应用程序来说，JSON比XML更快更易使用：
+    </p>
+    <h5>
+        使用XML
+    </h5>
+    <ul>
+        <li>读取XML文档</li>
+        <li>使用</li>
+        <li></li>
+    </ul>
+
+    <br>
+
+    <h5>
+        使用JSON
+    </h5>
+    <ul>
+        <li>读取JSON字符串</li>
+        <li>用eval()处理JSON字符串</li>
+    </ul>
+
+</body>
+
+</html>
